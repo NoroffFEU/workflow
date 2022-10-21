@@ -6,8 +6,12 @@ describe("My apple", () => {
     expect(apple.texture).toEqual("juicy");
   });
 
-  it("is delicious", () => {
+  it("is okay", () => {
     expect(apple.rating).toBeGreaterThan(4);
+  });
+
+  it("is delicious", () => {
+    expect(apple.rating).toBeGreaterThan(9);
   });
 
   it("is vegan friendly", () => {
