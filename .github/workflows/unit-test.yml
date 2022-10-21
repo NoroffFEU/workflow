@@ -1,5 +1,5 @@
 # Name of this action
-name: Automated Testing
+name: Automated Unit Testing
 
 # Event triggers on pull request event
 on: pull_request
@@ -7,9 +7,9 @@ on: pull_request
 # The jobs this action will run. You can write as many jobs as you want.
 jobs:
   # ID of the job
-  run-tests:
+  run-unit-tests:
     # Name of the job as it will be displayed in GitHub
-    name: Run Tests
+    name: Run Unit Tests
     # Machine which this action will be run on. For a list of all the machines available/how to run on self hosted machine visit
     runs-on: ubuntu-latest
 
@@ -29,4 +29,4 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        run: npm test
+        run: npm run test-unit
