@@ -1,25 +1,14 @@
-# Name of this action
 name: Automated Unit Testing
-
-# Event triggers on pull request event
 on: pull_request
-
-# The jobs this action will run. You can write as many jobs as you want.
 jobs:
-  # ID of the job
   run-unit-tests:
-    # Name of the job as it will be displayed in GitHub
     name: Run Unit Tests
-    # Machine which this action will be run on. For a list of all the machines available/how to run on self hosted machine visit
     runs-on: ubuntu-latest
 
-    # Steps this job must take to complete
     steps:
-      # Reference the main branch.
       - name: Checkout under $GITHUB_WORKSPACE
         uses: actions/checkout@main
 
-      # Specify which version of Node this project is using. For more information visit.
       - name: Set up NodeJS
         uses: actions/setup-node@v1
         with:
